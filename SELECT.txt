@@ -1,0 +1,92 @@
+﻿0 SELECT
+1.)SELECT population FROM world
+  WHERE name = 'Germany'
+2.)SELECT name, population FROM world
+  WHERE name IN ('Ireland', 'Iceland', 'Denmark');
+3.)SELECT name, area FROM world
+  WHERE area BETWEEN 200000 AND 2500000
+
+
+1 SELECT
+1.)SELECT name FROM world
+  WHERE name LIKE 'Y%'
+2.)SELECT name FROM world
+  WHERE name LIKE '%Y'
+3.)SELECT name FROM world
+  WHERE name LIKE '%X%'
+4.)SELECT name FROM world
+  WHERE name LIKE '%land'
+5.)SELECT name FROM world
+  WHERE name LIKE 'C%ia'
+6.) SELECT name FROM world
+  WHERE name LIKE '%oo%'
+7.)SELECT name FROM world
+  WHERE name LIKE '%a%a%a%'
+8,)SELECT name FROM world
+ WHERE name LIKE '_t%'
+ORDER BY name
+9.)SELECT name FROM world
+ WHERE name LIKE '%o__o%'
+10.)SELECT name FROM world
+ WHERE name LIKE '____'
+
+
+2 SELECT
+1.)SELECT name, continent, population FROM world
+2.)SELECT name FROM world
+WHERE population>200000000
+3.)SELECT name, gdp/population FROM world
+WHERE population>=200000000
+4.)SELECT name, population/1000000
+FROM world
+WHERE continent = 'South America
+5.)SELECT name, population FROM world
+ WHERE name IN ('France', 'Germany', 'Italy')
+6.)SELECT name FROM world
+WHERE name LIKE'United%'
+7.)SELECT name, population, area FROM world
+ WHERE area > 3000000 OR population > 250000000
+8.)SELECT name, population, area FROM world
+ WHERE area > 3000000 OR population > 250000000
+9.)SELECT name, ROUND (population/1000000, 2), ROUND (gdp/1000000000, 2) 
+FROM world
+WHERE continent = 'South America'
+10.)SELECT name, ROUND (gdp/population, -3)
+FROM world
+WHERE gdp >= 1000000000000
+
+
+3 SELECT
+1.)SELECT yr, subject, winner
+  FROM nobel
+ WHERE yr = 1950
+2.)SELECT winner
+  FROM nobel
+ WHERE yr = 1962
+   AND subject = 'Literature'
+3.)SELECT yr, subject
+FROM nobel
+WHERE winner = 'Albert Einstein'
+4.)SELECT winner
+  FROM nobel
+ WHERE yr >= 2000
+   AND subject = 'Peace'
+5.)SELECT yr, subject, winner
+FROM nobel
+where yr >= 1980 AND yr <= 1989
+AND subject = 'Literature'
+6.)SELECT * FROM nobel
+ WHERE winner IN
+  ('Theodore Roosevelt', 'Woodrow Wilson', 'Jimmy Carter')
+7.)SELECT winner FROM nobel
+WHERE winner LIKE 'John%'
+8.)SELECT winner FROM nobel
+WHERE yr = 1980 AND subject = 'Physics'
+AND WHERE yr = 1984 AND subject = 'Chemistry'
+9.)SELECT *
+FROM nobel
+WHERE yr = 1980
+AND subject NOT IN ('Chemistry', 'Medicine');
+10.)SELECT * FROM nobel
+WHERE yr < 1910 AND subject = 'Medicine'
+OR WHERE yr >= 2004 AND subject = 'Literature'
